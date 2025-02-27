@@ -24,7 +24,6 @@ body {
   background-color: var(--color-gray);
   grid-template-areas:
     "sidebar nav"
-    /* "sidebar project" */
     "sidebar main-content";
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 3fr;
@@ -33,6 +32,13 @@ body {
 .sidebar {
   grid-area: sidebar;
   background-color: var(--color-celtic-blue);
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 1fr;
+  align-content: start;
+  /* place-content: center; */
+  gap: 4em;
+  color: var(--color-white);
 }
 
 .nav {
@@ -43,4 +49,47 @@ body {
 .main-content {
   grid-area: main-content;
   background: var(--color-gray);
+}
+
+/* Styling sidebar elements */
+
+.dashboard-icon {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-icon img {
+  margin: 0.7em 0 0 0.7em;
+}
+
+.dashboard-icon p {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.dashboard ul {
+  display: grid;
+  gap: 1.8em;
+  align-content: baseline;
+  margin-left: 2.2em;
+}
+
+.item img {
+  height: 16px;
+  width: 16px;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 1.4em;
+  list-style: none;
+}
+
+ul li p {
+  font-size: 1.6em;
+  font-weight: 500;
 }
