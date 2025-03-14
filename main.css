@@ -36,7 +36,6 @@ body {
   grid-template-rows: auto auto 1fr;
   grid-template-columns: 1fr;
   align-content: start;
-  /* place-content: center; */
   gap: 4em;
   color: var(--color-white);
 }
@@ -44,6 +43,99 @@ body {
 .nav {
   grid-area: nav;
   background: var(--color-white);
+  display: grid;
+  grid-template-areas:
+    "firstCol secondCol"
+    "firstCol secondCol";
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.first-row {
+  grid-area: firstCol;
+  display: grid;
+  align-content: space-evenly;
+  margin-left: 4em;
+}
+
+.brand {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6em;
+}
+
+.brand .logo {
+  width: 60px;
+  height: 60px;
+  background: var(--color-saffron);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greetings > p {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4em;
+  line-height: 1.3;
+}
+
+.greetings > p span {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.second-row {
+  grid-area: secondCol;
+  display: grid;
+  margin-right: 4em;
+  justify-content: flex-end;
+  align-content: space-evenly;
+}
+
+.col2 {
+  justify-content: flex-end;
+}
+
+.col2 .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-el ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-el ul li a {
+  cursor: pointer;
+  background: var(--color-celtic-blue);
+  padding: 8px;
+  font-size: 1.6em;
+  color: var(--color-white);
+  border-radius: 8px;
+  width: 80px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+}
+
+.search-bar input[type="text"] {
+  padding: 6px;
+  width: 80%;
+  border: none;
+  background: var(--color-gray);
+  border-radius: 16px;
+  font-size: 1.6em;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  /* background: var(--color-white); */
+  border-radius: 16px;
 }
 
 .main-content {
